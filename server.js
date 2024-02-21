@@ -9,16 +9,16 @@ app.use(express.urlencoded({ extended: false }));
 // Middleware to use json
 app.use(express.json());
 // Creates variable for the database
-// const db = mysql.createConnection(
-//   {
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: 'team_db'
-//   },
-//   // logs message when connected
-//   console.log(`Connected to the team_db database.`)
-// );
+const db = mysql.createConnection(
+  {
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'team_db',
+  }).promise();
+  // logs message when connected
+  console.log(`Connected to the team_db database.`)
+
 
 const questions = [
   {
@@ -67,7 +67,11 @@ function init() {
     });
 }
 
-function showEmployees() {}
+function showEmployees() {
+  db.query('SELECT * FROM students', function (err, results) {
+    console.log(results);
+  });
+}
 
 function addEmployee() {}
 
