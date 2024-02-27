@@ -177,7 +177,7 @@ function updateRole() {
             let employeeID = answer.employee;
             let roleID = answer.role;
             let sql = "UPDATE employee SET role_id = ? WHERE id = ?";
-            db.query(sql, [roleId, employeeId], (error, response) => {
+            db.query(sql, [roleID, employeeID], (error, response) => {
               if (error) throw error;
               console.log(`new employee role added`);
 
