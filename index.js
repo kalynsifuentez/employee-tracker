@@ -145,7 +145,7 @@ function viewDepartments() {
 
 function updateRole() {
   db.query(
-    `SELECT employee.id, employee.first_name, employee.last_name, FROM employee LEFT JOIN role ON employee.role_id = role.id`,
+    `SELECT employee.id, employee.first_name, employee.last_name, role.title FROM employee LEFT JOIN role ON employee.role_id = role.id`,
     function (err, results) {
       const newEmployeeRoleArray = results.map((employee) => ({
         name: `${employee.first_name} ${employee.last_name}`,
