@@ -39,7 +39,7 @@ User is prompted to enter the employee’s first name, last name, role, and mana
 User is prompted to select an employee to update and their new role and this information is updated in the database 
 ## Video Link
 
-[App Walkthrough](https://drive.google.com/file/d/1SHz5yQBAS9xjwlo_xa9bXCHluesaHOxg/view)
+[App Walkthrough](https://drive.google.com/file/d/1ofsVsT1i_3pLv6Uv2gVOBADORLCOQ_41/view)
 
 ## Credits
 
